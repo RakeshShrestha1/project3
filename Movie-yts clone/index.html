@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Movie Website</title>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="generateSectionContent('homeSection')">Home</a></li>
+      <li><a href="#" onclick="generateSectionContent('moviesSection')">Movies</a></li>
+      <li><a href="#" onclick="generateSectionContent('webSeriesSection')">Web Series</a></li>
+      <li><a href="#" onclick="generateSectionContent('contactSection')">Contact Us</a></li>
+    </ul>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search for movies">
+      <button onclick="searchMovies()">Search</button>
+    </div>
+
+    <div class="login-signup">
+      <button onclick="toggleForm('signInForm')">Sign In</button>
+      <button onclick="toggleForm('signUpForm')">Sign Up</button>
+    </div>
+  </nav>
+
+  <div class="content" id="mainContent">
+    <div class="movie-grid" id="movieGrid"></div>
+  </div>
+
+  <div id="movieDetailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeMovieDetailsModal()">&times;</span>
+      <div id="movieDetailsContent"></div>
+    </div>
+  </div>
+
+  <div id="loadingSpinner"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
